@@ -1,0 +1,6 @@
+.next
+node_modules
+public
+docs
+src/data/projects.generated.json
+package-lock.json

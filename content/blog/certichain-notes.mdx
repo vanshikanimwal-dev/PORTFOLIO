@@ -1,0 +1,29 @@
+---
+title: "DRAFT — CertiChain keeps the PDF off the chain"
+date: "2026-10-16"
+tags: ["java", "backend", "draft"]
+excerpt: "Placeholder note from the CertiChain README. The certificate file stays off-chain and an SHA-256 fingerprint is what gets anchored."
+mood: "✦"
+placeholder: true
+---
+
+This is a placeholder diary entry. It only restates what the CertiChain README already says. Edit or delete it.
+
+## What the README describes
+
+CertiChain issues a digital certificate and lets anyone check it from a public link. The certificate file stays off-chain. An SHA-256 fingerprint is the value that can be anchored later. The README is explicit that records in the project are synthetic, not real academic credentials.
+
+The admin console and the public verification page talk to a Spring Boot API. That API uses PostgreSQL and MinIO, and it can register the fingerprint on a local chain or on Sepolia.
+
+## Shape of the system
+
+```text
+web -> Spring Boot API
+api -> PostgreSQL
+api -> MinIO
+api -> local chain or Sepolia
+```
+
+## Still to write
+
+The resume lists six verification checks and three role-based views. Those details are not repeated here so this draft does not drift from the README summary above. Replace this file with your own notes when you want a real post.

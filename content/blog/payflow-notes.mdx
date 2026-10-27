@@ -1,0 +1,29 @@
+---
+title: "DRAFT — PayFlow is a wallet simulation"
+date: "2026-10-08"
+tags: ["java", "flutter", "draft"]
+excerpt: "Placeholder note from the PayFlow README. Amounts are integer paise, and the project never handles real card data or real money."
+mood: "♡"
+placeholder: true
+---
+
+This is a placeholder diary entry based on the PayFlow README. It is not a published write-up.
+
+## What the README says
+
+PayFlow is a wallet and payments simulation. It never handles real card data or real money. Amounts are integer paise, and the currency is INR.
+
+The Spring Boot API covers auth, a ledger, transfers, locking, idempotency, a mock gateway, top-ups, merchant payments, refunds, reconciliation, audit, and admin APIs. Later README notes mention a savings wallet, transfer limits, a transaction PIN, scheduled transfers, split requests, cashback, receipts, disputes, a fee quote, and card top-up refunds.
+
+## The client
+
+The Flutter client in `mobile/` covers register and login, the wallet, send, top-up, history, merchant QR, scan-and-pay, and admin checks. Before a transfer it looks up the recipient.
+
+```text
+unit: integer paise
+currency: INR
+scope: simulation
+client: Flutter, in mobile/
+```
+
+Replace this draft with your own account of the ledger when you want to publish it.
