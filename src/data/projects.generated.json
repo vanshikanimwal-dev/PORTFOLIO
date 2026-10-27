@@ -1,0 +1,1311 @@
+[
+  {
+    "name": "CertiChain",
+    "description": "Issues a digital certificate and lets anyone check it from a public link. The certificate file stays off-chain, an SHA-256 fingerprint is what gets anchored, and the admin site talks to a Spring Boot API backed by PostgreSQL, MinIO, and either a local chain or Sepolia. The README states that records in the project are synthetic, not real academic credentials.",
+    "readmeSummary": "CertiChain issues a digital certificate and anyone can check it from a public link. The certificate file stays off-chain. An SHA-256 fingerprint is what later gets anchored. Records in this project are synthetic. They are not real academic credentials. The admin console and the public verification page use the API. Issuing a certificate writes an SHA-256 fingerprint, stores a PDF in MinIO, and registers that fingerpr",
+    "category": "Backend",
+    "featured": true,
+    "rank": 1,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 286445
+      },
+      {
+        "name": "TypeScript",
+        "bytes": 154915
+      },
+      {
+        "name": "Python",
+        "bytes": 3505
+      },
+      {
+        "name": "Solidity",
+        "bytes": 1722
+      },
+      {
+        "name": "CSS",
+        "bytes": 1138
+      },
+      {
+        "name": "HTML",
+        "bytes": 827
+      },
+      {
+        "name": "Dockerfile",
+        "bytes": 336
+      }
+    ],
+    "stack": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "TypeScript",
+      "Solidity",
+      "MinIO"
+    ],
+    "topics": [],
+    "stars": 1,
+    "forks": 0,
+    "updatedAt": "2026-10-16T11:15:23Z",
+    "pushedAt": "2026-10-16T11:15:18Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/CertiChain",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "PayFlow",
+    "description": "Wallet and payments simulation that never handles real card data or real money. Amounts are integer paise. The Spring Boot API covers auth, a ledger, transfers, locking, idempotency, a mock gateway, top-ups, merchant payments, refunds, and admin routes. The Flutter client in mobile/ covers register, login, the wallet, send, top-up, history, and merchant QR.",
+    "readmeSummary": "Wallet and payments simulation. It never handles real card data or real money. Amounts are integer paise (long), currency INR. The backend covers SPEC phases 1–7: auth, ledger, transfers, locking, idempotency, the mock gateway, top-ups, merchant payments, refunds, reconciliation, audit, and admin APIs. Later additions are a savings wallet, transfer limits, a transaction PIN, scheduled transfers, split requests, 1% ca",
+    "category": "Backend",
+    "featured": true,
+    "rank": 2,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 375586
+      },
+      {
+        "name": "Dart",
+        "bytes": 165306
+      },
+      {
+        "name": "PLpgSQL",
+        "bytes": 5220
+      },
+      {
+        "name": "HTML",
+        "bytes": 1533
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 1160
+      },
+      {
+        "name": "Dockerfile",
+        "bytes": 576
+      }
+    ],
+    "stack": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Redis",
+      "Flutter",
+      "Dart",
+      "Docker"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-08T11:05:37Z",
+    "pushedAt": "2026-10-08T11:05:33Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/PayFlow",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "AlgoVerse",
+    "description": "Learn sorting, searching, and pathfinding by watching them run in the browser or in JavaFX. The README describes animations for sorting, searching, pathfinding, side-by-side sort compare, linked lists, and binary search trees, with a GitHub Pages demo that needs no install. The same animations are available as a local Java desktop app.",
+    "readmeSummary": "[▶ Open in your browser](https://vanshikanimwal-dev.github.io/AlgoVerse/) — no Java, no install. Learn algorithms through motion. AlgoVerse animates sorting, searching, pathfinding, side-by-side sort compare, linked lists, and binary search trees. Live demo  https://vanshikanimwal-dev.github.io/AlgoVerse/",
+    "category": "Tools",
+    "featured": true,
+    "rank": 3,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 167744
+      }
+    ],
+    "stack": [
+      "Java",
+      "JavaFX",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-16T11:25:46Z",
+    "pushedAt": "2026-10-16T11:25:42Z",
+    "homepage": "https://vanshikanimwal-dev.github.io/AlgoVerse/",
+    "url": "https://github.com/vanshikanimwal-dev/AlgoVerse",
+    "defaultBranch": "master",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "FINAL-YEAR-PROJECT-",
+    "description": "Holds PipelineIQ, a simulated study of machine-learning bottleneck detection in CI/CD pipelines plus a Streamlit dashboard. It builds 4,800 simulated runs and trains logistic regression, an RBF SVM, gradient boosting, and a random forest. A stage alert fires only when model probability and a duration rule both trip. The README says the runs are simulated because no public dataset linked developer behavior to bottleneck labels.",
+    "readmeSummary": "PipelineIQ lives in [cicdbottleneck](cicdbottleneck/README.md).",
+    "category": "AI/ML",
+    "featured": true,
+    "rank": 4,
+    "primaryLanguage": "Python",
+    "languages": [
+      {
+        "name": "Python",
+        "bytes": 160220
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-18T07:41:11Z",
+    "pushedAt": "2026-10-18T07:41:07Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/FINAL-YEAR-PROJECT-",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "SyncSound",
+    "description": "Coordinates one YouTube video across separate phones so each phone plays locally into headphones already paired with it. A host shares a room code, link, or QR code. Playback is a scheduled start plus drift correction, and audio never passes through the server. The current build is a Vite client and a single-process FastAPI server that stores rooms in memory and in SQLite.",
+    "readmeSummary": "SyncSound coordinates the same YouTube video across separate phones. Each person opens the room in their own browser. Each phone plays the video locally, and that phone’s operating system sends the sound to the headphones already paired with it. A website cannot attach four Bluetooth headsets to one phone. Pair each headset with the phone that person is holding. Playback is a scheduled start plus drift correction. It",
+    "category": "Web",
+    "featured": true,
+    "rank": 5,
+    "primaryLanguage": "TypeScript",
+    "languages": [
+      {
+        "name": "TypeScript",
+        "bytes": 133247
+      },
+      {
+        "name": "Python",
+        "bytes": 59243
+      },
+      {
+        "name": "CSS",
+        "bytes": 2343
+      },
+      {
+        "name": "HTML",
+        "bytes": 1307
+      }
+    ],
+    "stack": [
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "SQLite",
+      "Vite"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-14T09:40:31Z",
+    "pushedAt": "2026-10-14T09:40:26Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/SyncSound",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "BULLPAY",
+    "description": "Self-hosted checkout for one Indian merchant. The customer pays in a normal UPI app and the rupees land in the merchant’s own UPI ID. BULLPAY does not hold a balance or call a bank or NPCI API. It marks a checkout paid only when a bank credit alert matches that open session. The README says it is experimental software and not an RBI-licensed payment product.",
+    "readmeSummary": "BULLPAY is experimental software. It is not a bank. It is not an NPCI-approved or RBI-licensed payment aggregator. It is not affiliated with any bank or UPI app. A browser event is only for the shop’s user interface. The merchant fulfills an order only after verifying the signed webhook, and still reconciles SUCCESS against the bank statement. A missing or delayed SMS can leave a real payment unmatched. Use a test UP",
+    "category": "Web",
+    "featured": true,
+    "rank": 6,
+    "primaryLanguage": "JavaScript",
+    "languages": [
+      {
+        "name": "JavaScript",
+        "bytes": 234628
+      }
+    ],
+    "stack": [
+      "JavaScript",
+      "Node.js",
+      "SQLite"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-21T07:13:19Z",
+    "pushedAt": "2026-10-21T07:13:15Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/BULLPAY",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "PORTFOLIO",
+    "description": "Repository for this portfolio. At the last GitHub sync it contained an MIT license and a one-line README, with no site source pushed yet.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Web",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-27T05:02:20Z",
+    "pushedAt": "2026-10-27T05:02:17Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/PORTFOLIO",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "final-year-projecr",
+    "description": "Empty GitHub repository. There is no README and the contents API reports no files, so there is no project to describe.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-10-17T06:22:32Z",
+    "pushedAt": "2026-10-17T06:22:32Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/final-year-projecr",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "vanshikanimwal-dev",
+    "description": "GitHub profile repository. GitHub’s description calls it config files for the profile. The README introduces Vanshika as an app, Java, web, and AR/VR developer and links the LinkedIn and LeetCode profiles used on this site.",
+    "readmeSummary": "📱 App Developer &nbsp;&nbsp; ☕ Java Developer &nbsp;&nbsp; 🌐 Web Developer &nbsp;&nbsp; 🕶️ AR/VR Enthusiast &nbsp;&nbsp; 🎨 UI/UX Explorer Turning ideas into immersive, intuitive, and impactful digital experiences. [ ](https://www.linkedin.com/in/vanshika-nimwal-90ab24314)",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [
+      "config",
+      "github-config"
+    ],
+    "stars": 2,
+    "forks": 0,
+    "updatedAt": "2026-10-01T07:38:30Z",
+    "pushedAt": "2026-09-27T14:22:48Z",
+    "homepage": "https://github.com/vanshikanimwal-dev",
+    "url": "https://github.com/vanshikanimwal-dev/vanshikanimwal-dev",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "AV-GRAPHICS-ART",
+    "description": "React and Express site for AV Graphics Art. index.html describes LED boards, glow signs, and name plates in Delhi and names Anand Prakash Nimwal in the author meta tag. There is no README. This summary comes from package.json and that page metadata. The repository homepage is https://av-graphics-art.vercel.app.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Web",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "JavaScript",
+    "languages": [
+      {
+        "name": "JavaScript",
+        "bytes": 210151
+      },
+      {
+        "name": "CSS",
+        "bytes": 23910
+      },
+      {
+        "name": "HTML",
+        "bytes": 2068
+      }
+    ],
+    "stack": [
+      "React",
+      "Express",
+      "Node.js",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-09-26T09:37:39Z",
+    "pushedAt": "2026-09-26T09:37:36Z",
+    "homepage": "https://av-graphics-art.vercel.app",
+    "url": "https://github.com/vanshikanimwal-dev/AV-GRAPHICS-ART",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "leetcode-daily",
+    "description": "Personal log of daily LeetCode practice. The README says solutions are written in Java and are meant to include the problem, the approach, and time and space complexity. Topics listed include arrays, recursion, lists, trees, graphs, dynamic programming, and greedy algorithms. It describes a goal of one problem a day.",
+    "readmeSummary": "Welcome to my Daily LeetCode Practice Repository 👩‍💻✨ This repository is a personal commitment to consistency, problem-solving, and growth by solving LeetCode problems daily and documenting clean, well-explained solutions. 🧠 Strengthen Data Structures & Algorithms",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [
+      "Java"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-04-20T17:02:00Z",
+    "pushedAt": "2026-04-20T17:01:56Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/leetcode-daily",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "review-property-app",
+    "description": "Flutter repository whose README is still the default starter text from the Flutter template. No product features are documented. GitHub reports Dart together with the engine files that ship inside a Flutter project.",
+    "readmeSummary": "This project is a starting point for a Flutter application. A few resources to get you started if this is your first Flutter project: - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 6719
+      },
+      {
+        "name": "HTML",
+        "bytes": 1210
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-04-14T12:02:46Z",
+    "pushedAt": "2026-04-14T12:02:42Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/review-property-app",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "New-Repo",
+    "description": "README only says changes were made in an app in order to earn a badge, and that this was done a second time. No application source is described.",
+    "readmeSummary": "making changes in the app and getting a badge",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-04-13T17:41:00Z",
+    "pushedAt": "2026-04-13T17:40:55Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/New-Repo",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Expense-tracker",
+    "description": "Flutter expense tracker. The README describes Clean Architecture, Firebase email and password auth, income and expense transactions, and a dashboard for spending analytics with cloud sync. Those features are what the README claims. This sync did not open every screen to re-verify them.",
+    "readmeSummary": "A production-ready Flutter application for comprehensive personal finance management, built with Clean Architecture, Firebase, and Riverpod. Smart Expense Tracker provides users with powerful tools to monitor, categorize, and analyze their spending patterns. The application features real-time cloud synchronization, intuitive transaction management, and comprehensive financial analytics powered by an intuitive dashboa",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 55000
+      },
+      {
+        "name": "HTML",
+        "bytes": 1228
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Riverpod"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-02-17T06:30:54Z",
+    "pushedAt": "2026-02-17T06:30:51Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Expense-tracker",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "AR-Business-card",
+    "description": "Unity AR business card. A phone camera tracks a printed card and shows 3D content and buttons in that spot. The README specifies Unity 2022.3.6f2, AR Foundation, ARCore, C#, and Blender assets, and says the target is Android. GitHub reported no language bytes for the repo.",
+    "readmeSummary": "An interactive Augmented Reality (AR) Business Card built using Unity (2022.3.6f2) and AR technologies. This project transforms a traditional business card into an immersive digital experience where users can scan a card and view 3D content, animations, and interactive elements directly in real-world space. The AR Business Card enhances personal branding by overlaying digital content on top of a physical card using a",
+    "category": "XR",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [
+      "Unity",
+      "C#",
+      "AR Foundation",
+      "Blender"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2026-02-11T15:37:46Z",
+    "pushedAt": "2026-02-11T15:37:43Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/AR-Business-card",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Resume-Builder",
+    "description": "Repository titled Resume-Builder. The README is only that title, so no builder features are documented.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Tools",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-12-27T13:01:20Z",
+    "pushedAt": "2025-12-27T13:01:17Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Resume-Builder",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Unique-Gemini-Project-in-HTML",
+    "description": "A single HTML file the README says to save as index.html and open in a browser. The notes describe finger tracking: the index finger moves a shape, a pinch scales it, two fingers switch the shape, and a fist triggers fireworks.",
+    "readmeSummary": "Copy this code in notepad and save the file and name it index.html and open this file in any browser and it will",
+    "category": "Web",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "HTML",
+    "languages": [
+      {
+        "name": "HTML",
+        "bytes": 8043
+      }
+    ],
+    "stack": [
+      "HTML"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-12-26T17:46:19Z",
+    "pushedAt": "2025-12-26T17:46:15Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Unique-Gemini-Project-in-HTML",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "student-management-system",
+    "description": "Console student manager in Java, framed as a data-structures exercise before adding a GUI. It can add a student, list students, search by id with linear search, and delete by id. Records sit in an ArrayList, with Student and StudentManager kept separate.",
+    "readmeSummary": "🎓 DSA-Powered Student Management System (Java Backend) A console-based Student Management System built using Java, focused on Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOP). This project is part of a learning journey to build strong backend fundamentals before adding a GUI.",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 4828
+      }
+    ],
+    "stack": [
+      "Java"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-12-15T08:51:16Z",
+    "pushedAt": "2025-12-15T08:51:11Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/student-management-system",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "ferrero",
+    "description": "Flutter app for Ferrero field agents to track and audit assets at retail outlets. The README describes login that stores a bearer token, search by outlet name or UOC, and submissions that can include images and GPS. It is marked as an internal app for Android and iOS.",
+    "readmeSummary": "🍫 Ferrero Asset Management Mobile Application The Ferrero Asset Management Mobile Application is a cross-platform tool built using the Flutter framework, designed for Ferrero’s field agents to track, audit, and manage physical assets deployed at various retail outlets. The app streamlines on-ground operations by integrating secure login, real-time asset monitoring, data submission with images and GPS, and conditiona",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 181497
+      },
+      {
+        "name": "HTML",
+        "bytes": 138601
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-10-10T10:08:13Z",
+    "pushedAt": "2025-10-10T10:08:10Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/ferrero",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "ferrero-version1.2",
+    "description": "Empty GitHub repository. There is no README and no files to describe.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-10-07T06:13:15Z",
+    "pushedAt": "2025-10-07T06:13:15Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/ferrero-version1.2",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "ferrero-version1.1",
+    "description": "README contains only the line ferrero-version1.1. No features are documented.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-10-07T06:12:46Z",
+    "pushedAt": "2025-10-07T06:12:42Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/ferrero-version1.1",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "knovatortask",
+    "description": "Flutter assessment app for a Knovator task. It lists posts from the JSONPlaceholder API using BLoC, stores them in Shared Preferences, and refreshes from the network while keeping each post’s read flag. Tapping a post marks it read and opens a detail screen.",
+    "readmeSummary": "🚀 Knovator Flutter Particle Task: Post List with BLoC, Persistence & Background Sync This Flutter mobile application was developed for the Knovator Assessment Task. It displays a list of posts fetched from a public API with BLoC state management, local persistence, and a cache-first background sync strategy.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 19551
+      },
+      {
+        "name": "HTML",
+        "bytes": 1224
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-10-06T15:40:50Z",
+    "pushedAt": "2025-10-06T15:40:47Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/knovatortask",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "knovator-task",
+    "description": "No README. The repository only contains .gitignore and LICENSE, so there is no app code to describe.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-10-06T15:23:55Z",
+    "pushedAt": "2025-10-06T15:23:51Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/knovator-task",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "morphix-version-1.1",
+    "description": "The GitHub description and the README both call this an all-in-one image editing app. The README does not list editing tools or screens. Dart is the primary language.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 151994
+      },
+      {
+        "name": "HTML",
+        "bytes": 1256
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-10-01T06:27:18Z",
+    "pushedAt": "2025-10-01T06:27:14Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/morphix-version-1.1",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Weather-App",
+    "description": "Flutter weather app. The README says the theme and background change with the current conditions, the app reads the device location, cities can be searched, and it shows hourly and 7-day forecasts. Weather data comes from OpenWeatherMap, with the API key left as a placeholder in lib/main.dart.",
+    "readmeSummary": "A dynamic and visually appealing weather application built with Flutter. It provides real-time weather information and a beautiful adaptive UI that changes its theme and background to match the current weather conditions. - 🎨 Dynamic Theming: Color palette & background automatically adapt for sunny, rainy, cloudy, or snowy weather.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 23145
+      },
+      {
+        "name": "HTML",
+        "bytes": 1256
+      },
+      {
+        "name": "Java",
+        "bytes": 1019
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-09-23T19:09:33Z",
+    "pushedAt": "2025-09-23T19:09:29Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Weather-App",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Morphix-App",
+    "description": "The GitHub description and the README both call this an all-in-one image editing app. No language bytes were reported, and the README does not list tools or screens.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-09-23T15:22:01Z",
+    "pushedAt": "2025-09-23T15:21:58Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Morphix-App",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "calculator-app",
+    "description": "No README. The repository only contains .gitignore and LICENSE, so there is no calculator implementation to describe.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Tools",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-09-17T06:31:32Z",
+    "pushedAt": "2025-09-17T06:31:29Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/calculator-app",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "test",
+    "description": "Flutter build of a Ferrero asset app. The README covers login, search by outlet name or UOC, filters for status and date range, and opening a consent-form PDF when an asset is completed. Other statuses navigate to a consent-form page.",
+    "readmeSummary": "This is a mobile application built with Flutter to manage and track assets. The app allows users to log in, search for assets, apply various filters, and view or interact with asset-related documents, such as consent forms. Login & Authentication: Users can log in with a username and password to access the app's functionality. Asset Search: A dedicated search page allows users to find assets by outlet name or UOC (Un",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 358036
+      },
+      {
+        "name": "HTML",
+        "bytes": 138601
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-08-18T08:49:53Z",
+    "pushedAt": "2025-08-18T08:49:50Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/test",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "new-version-ferrero-app-",
+    "description": "Flutter project named ferrero_asset_management. The README is still the default Flutter starter text, so this copy does not document its own features.",
+    "readmeSummary": "This project is a starting point for a Flutter application. A few resources to get you started if this is your first Flutter project: - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 358085
+      },
+      {
+        "name": "HTML",
+        "bytes": 136151
+      },
+      {
+        "name": "Java",
+        "bytes": 3269
+      },
+      {
+        "name": "Python",
+        "bytes": 1276
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-08-11T04:45:18Z",
+    "pushedAt": "2025-08-11T04:45:13Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/new-version-ferrero-app-",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "app-version-new",
+    "description": "Flutter prototype titled Ferrero Asset Management App. The README says field agents capture shop photos and location and run a digital consent and OTP flow with shop owners. It also mentions search and status filters such as Completed, In Progress, Pending, and Open.",
+    "readmeSummary": "This project is a Flutter-based mobile application prototype designed for managing and verifying assets for Ferrero outlets. It streamlines the process of capturing essential shop data, including photos, location details, and facilitating a digital consent and OTP verification workflow with shop owners. The application is built with a focus on demonstrating core functionalities for field agents to efficiently collect",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 352639
+      },
+      {
+        "name": "HTML",
+        "bytes": 137435
+      },
+      {
+        "name": "Java",
+        "bytes": 2437
+      },
+      {
+        "name": "Python",
+        "bytes": 1276
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-07-14T10:20:10Z",
+    "pushedAt": "2025-07-14T10:20:07Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/app-version-new",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "asset-management-app",
+    "description": "README is only the title asset-management-app. Dart is the main language GitHub reported. No feature list is written in the repository.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Dart",
+    "languages": [
+      {
+        "name": "Dart",
+        "bytes": 244734
+      },
+      {
+        "name": "HTML",
+        "bytes": 139637
+      },
+      {
+        "name": "Java",
+        "bytes": 1901
+      },
+      {
+        "name": "Python",
+        "bytes": 1276
+      }
+    ],
+    "stack": [
+      "Flutter",
+      "Dart"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-06-17T06:41:23Z",
+    "pushedAt": "2025-06-17T06:41:20Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/asset-management-app",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "flutter-app",
+    "description": "Default Flutter starter README titled ferrero_asset_management. No custom features are documented, and GitHub reported no language bytes.",
+    "readmeSummary": "This project is a starting point for a Flutter application. A few resources to get you started if this is your first Flutter project: - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [
+      "Flutter"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-06-14T08:39:08Z",
+    "pushedAt": "2025-06-14T08:39:04Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/flutter-app",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "App",
+    "description": "Empty GitHub repository. There is no README and no files to describe.",
+    "readmeSummary": "No README summary is available for this repository.",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-06-14T08:33:52Z",
+    "pushedAt": "2025-06-14T08:33:52Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/App",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": true,
+    "curated": true
+  },
+  {
+    "name": "Data-Structure-And-Algorithms-",
+    "description": "Notes repository for data-structures practice from LeetCode and GeeksforGeeks, grouped by topic. The README names Java as the language and lists an Arrays folder among others. It states a personal goal of three problems a day. That goal is not a measured result in the repo.",
+    "readmeSummary": "Welcome to my Data Structures & Algorithms Journey repository! This repo contains all the problems I solve from platforms like LeetCode, GeeksForGeeks, categorized by topic with clean code and explanations. Consistently improve my DSA skills by solving at least 3 problems per day and mastering patterns for coding interviews at top tech companies (Google, Microsoft, etc.).",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [
+      "Java"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-06-07T03:27:09Z",
+    "pushedAt": "2025-06-07T03:27:04Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Data-Structure-And-Algorithms-",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "ferrero-asset-management-backup",
+    "description": "Default Flutter starter README for a project titled ferrero_asset_management. No custom features are documented.",
+    "readmeSummary": "This project is a starting point for a Flutter application. A few resources to get you started if this is your first Flutter project: - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [
+      "Flutter"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-06-05T05:48:48Z",
+    "pushedAt": "2025-06-05T05:48:45Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/ferrero-asset-management-backup",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "ferrero-asset-management",
+    "description": "Default Flutter starter README for a project titled ferrero_asset_management. No custom features are documented.",
+    "readmeSummary": "This project is a starting point for a Flutter application. A few resources to get you started if this is your first Flutter project: - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)",
+    "category": "Mobile",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [
+      "Flutter"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-06-03T04:37:17Z",
+    "pushedAt": "2025-06-03T04:37:16Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/ferrero-asset-management",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "survey-system-in-java",
+    "description": "Java survey app with a graphical interface. The README says a user can create surveys, collect multiple-choice or open answers, view results, and save data locally. It does not say whether the GUI is JavaFX or Swing.",
+    "readmeSummary": "A simple yet powerful Survey System built with Java and a graphical user interface. This app allows users to create, participate in, and view the results of surveys — all within an intuitive interface. 💬✅ - Create custom surveys with multiple questions - Support for multiple choice & open-ended responses",
+    "category": "Tools",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 9545
+      }
+    ],
+    "stack": [
+      "Java"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-04-15T04:03:41Z",
+    "pushedAt": "2025-04-15T04:03:38Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/survey-system-in-java",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Password-Generator-",
+    "description": "Java password generator with a graphical interface. The README says it can set a length, toggle uppercase, lowercase, numbers, and symbols, and copy the result. It does not say whether the GUI is JavaFX or Swing.",
+    "readmeSummary": "A sleek and simple password generator built in Java with a graphical user interface. Create secure, customizable passwords with just one click! 🔥 - GUI Framework: JavaFX / Swing (replace based on your project) - IDE: IntelliJ IDEA / Eclipse / NetBeans",
+    "category": "Tools",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 6167
+      }
+    ],
+    "stack": [
+      "Java"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-04-14T12:58:33Z",
+    "pushedAt": "2025-04-14T12:58:29Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Password-Generator-",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Snake-game-in-jav",
+    "description": "Classic snake game built with Java and Swing. Arrow keys move the snake, food spawns at random, and the score is tracked until the snake hits a wall or itself. The README includes a restart after game over.",
+    "readmeSummary": "A simple and classic Snake Game built using Java and Swing GUI. Eat the food, grow longer, and try not to hit the wall or yourself! git clone https://github.com/vanshikanimwal-dev/snake-game-java.git open in your IDE (like IntelliJ or Eclipse)",
+    "category": "Games",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "Java",
+    "languages": [
+      {
+        "name": "Java",
+        "bytes": 18895
+      }
+    ],
+    "stack": [
+      "Java",
+      "Swing"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-04-13T07:40:53Z",
+    "pushedAt": "2025-04-13T07:40:50Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Snake-game-in-jav",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Vanshika-Nimwal-Introduction",
+    "description": "Profile-style README. It introduces Vanshika as a Java developer interested in Unity games, Flutter, React, and Blender, and mentions LeetCode practice. No application code is described. GitHub’s short description repeats the same introduction.",
+    "readmeSummary": "🚀 Java Developer  🎮 Game Dev Enthusiast  💡 Problem Solver - 🎓 Passionate about software & game development - 💻 Currently working on Java-based apps and Unity games",
+    "category": "Learning",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": null,
+    "languages": [],
+    "stack": [],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-04-13T07:34:06Z",
+    "pushedAt": "2025-04-13T07:34:03Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Vanshika-Nimwal-Introduction",
+    "defaultBranch": "main",
+    "image": "https://leetcard.jacoblin.cool/vanni2005?theme=dark&font=Raleway",
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "myportfolio",
+    "description": "Earlier personal portfolio site. The README lists an about section, a tech-stack display, a project gallery, LeetCode and GitHub stats, a contact form, and dark mode. It names React with HTML, CSS, and JavaScript, and mentions Tailwind or Bootstrap and GSAP or Framer Motion without saying which pair is the one that shipped.",
+    "readmeSummary": "🌐 Vanshika Nimwal — Personal Portfolio Website This is the personal portfolio website of Vanshika Nimwal, built to showcase my projects, skills, experience, and journey as a developer and creative tech enthusiast. - 🧩 Project Gallery with Images & GitHub Links",
+    "category": "Web",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "TypeScript",
+    "languages": [
+      {
+        "name": "TypeScript",
+        "bytes": 201054
+      },
+      {
+        "name": "CSS",
+        "bytes": 5986
+      },
+      {
+        "name": "HTML",
+        "bytes": 1415
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 869
+      }
+    ],
+    "stack": [
+      "React",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-04-11T07:19:09Z",
+    "pushedAt": "2025-04-11T07:19:06Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/myportfolio",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  },
+  {
+    "name": "Organ-Donation-System-frontend",
+    "description": "Frontend for an organ-donation system. The repository description says it was built on ICP for a hackathon, with some AI help. The README itself is the stock Lovable guide and links a Lovable project. Screens and ICP behavior are not documented in the README.",
+    "readmeSummary": "URL: https://lovable.dev/projects/62561eb4-2ffb-4bef-b505-53f8bb324b3c There are several ways of editing your application. Simply visit the [Lovable Project](https://lovable.dev/projects/62561eb4-2ffb-4bef-b505-53f8bb324b3c) and start prompting.",
+    "category": "Web",
+    "featured": false,
+    "rank": null,
+    "primaryLanguage": "TypeScript",
+    "languages": [
+      {
+        "name": "TypeScript",
+        "bytes": 3806
+      },
+      {
+        "name": "HTML",
+        "bytes": 1238
+      },
+      {
+        "name": "JavaScript",
+        "bytes": 904
+      }
+    ],
+    "stack": [
+      "TypeScript",
+      "HTML",
+      "JavaScript"
+    ],
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updatedAt": "2025-04-11T07:00:56Z",
+    "pushedAt": "2025-04-11T07:00:53Z",
+    "homepage": null,
+    "url": "https://github.com/vanshikanimwal-dev/Organ-Donation-System-frontend",
+    "defaultBranch": "main",
+    "image": null,
+    "empty": false,
+    "curated": true
+  }
+]
