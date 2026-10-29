@@ -13,19 +13,19 @@ export function BlogIndex({ posts, tags }: { posts: PostMeta[]; tags: string[] }
 
   return (
     <div>
-      <div className="mb-4 flex flex-wrap gap-2">
-        <button type="button" className="lang-chip" aria-pressed={tag === "All"} onClick={() => setTag("All")}>
+      <div className="pixel-tabs mb-4">
+        <button type="button" aria-pressed={tag === "All"} onClick={() => setTag("All")}>
           All
         </button>
         {tags.map((item) => (
-          <button key={item} type="button" className="lang-chip" aria-pressed={tag === item} onClick={() => setTag(item)}>
+          <button key={item} type="button" aria-pressed={tag === item} onClick={() => setTag(item)}>
             {item}
           </button>
         ))}
       </div>
       <ul className="space-y-4">
         {visible.map((post) => (
-          <li key={post.slug} className="diary-card p-4">
+          <li key={post.slug} className="pixel-window window-body">
             <p className="text-sm text-muted">
               [{post.date}
               {" // "}

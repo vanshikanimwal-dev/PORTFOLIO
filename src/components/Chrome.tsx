@@ -1,31 +1,23 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { BootSequence } from "@/components/effects/BootSequence";
-import { CustomCursor } from "@/components/effects/CustomCursor";
-import { HyperProvider } from "@/components/effects/HyperContext";
-import { ParticleField } from "@/components/effects/ParticleField";
-import { Scanlines } from "@/components/effects/Scanlines";
-import { ScrollProgress } from "@/components/effects/ScrollProgress";
+import { PixelCursor } from "@/components/effects/PixelCursor";
+import { GameProvider } from "@/components/game/GameContext";
 import { Footer } from "@/components/sections/Footer";
-import { Nav } from "@/components/sections/Nav";
+import { Hud } from "@/components/ui/Hud";
+import { LoadingScreen } from "@/components/ui/LoadingScreen";
 
 export function Chrome({ children }: { children: ReactNode }) {
   return (
-    <HyperProvider>
+    <GameProvider>
       <a className="skip-link" href="#content">
         Skip to content
       </a>
-      <Scanlines />
-      <CustomCursor />
-      <ScrollProgress />
-      <ParticleField />
-      <BootSequence />
-      <Nav />
-      <main id="content" className="site-main">
-        {children}
-      </main>
+      <LoadingScreen />
+      <PixelCursor />
+      <Hud />
+      <main id="content">{children}</main>
       <Footer />
-    </HyperProvider>
+    </GameProvider>
   );
 }

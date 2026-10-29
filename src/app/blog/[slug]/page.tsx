@@ -24,19 +24,19 @@ export default async function BlogPostPage({ params }: Props) {
   const { newer, older } = getNeighbors(slug);
 
   return (
-    <article className="section mx-auto max-w-3xl">
-      <p className="kicker">
+    <article className="level diary">
+      <p className="level-kicker">
         [{post.date}
         {" // "}
         {post.mood}] · {post.readingTime} min
       </p>
-      <h1 className="font-display text-5xl md:text-6xl">{post.title}</h1>
+      <h1>{post.title}</h1>
       {post.placeholder ? (
-        <p className="mt-3 text-hot">PLACEHOLDER — edit content/blog/{post.slug}.mdx before treating this as a published post.</p>
+        <p className="fine">PLACEHOLDER — edit content/blog/{post.slug}.mdx before treating this as a published post.</p>
       ) : null}
       <div className="mt-6 grid gap-6 lg:grid-cols-[180px_1fr]">
         <aside>
-          <p className="font-pixel text-hot">INDEX</p>
+          <p className="level-kicker">Index</p>
           <ul className="mt-2 space-y-1 text-sm">
             {post.headings.map((heading) => (
               <li key={heading.id} className={heading.level === 3 ? "pl-3" : undefined}>

@@ -1,6 +1,10 @@
 # Vanshika Nimwal — portfolio
 
-Personal site for Vanshika Nimwal. The copy comes from `docs/resume.pdf` and from public GitHub data for [vanshikanimwal-dev](https://github.com/vanshikanimwal-dev). Missing facts are marked `TODO` instead of being invented.
+Personal site for Vanshika Nimwal, built as an original pixel-game. The copy comes from `docs/resume.pdf` and from public GitHub data for [vanshikanimwal-dev](https://github.com/vanshikanimwal-dev). Missing facts are marked `TODO` instead of being invented.
+
+Sound is off until the HUD toggle is pressed. Effects are generated in the browser. There are no audio files.
+
+To restyle the pixel avatar, edit the row strings in `src/components/pixel/sprites.tsx` (`PixelAvatar`). `H` is hair, `B` is the bow, `S` is skin, `M` is the shirt.
 
 ## Setup
 

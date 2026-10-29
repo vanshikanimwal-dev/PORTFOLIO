@@ -12,10 +12,10 @@ export default function BlogPage() {
   const tags = getAllTags().map(([tag]) => tag);
 
   return (
-    <section className="section">
-      <p className="kicker">DIARY.LOG</p>
-      <h1 className="font-display text-6xl">Digital Diary</h1>
-      <p className="mt-3 max-w-2xl text-muted">
+    <section className="level">
+      <p className="level-kicker">Level 04</p>
+      <h1>Diary</h1>
+      <p className="fine">
         These three entries are placeholders written from public README notes. Replace them by editing the files in
         content/blog.
       </p>

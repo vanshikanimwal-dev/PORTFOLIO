@@ -1,62 +1,38 @@
 "use client";
 
 import { useState } from "react";
-import { foundations, skillCategories, skillTooltip, skillUsage, skills } from "@/data/skills";
-import type { SkillCategory } from "@/data/skills";
-import { SkillIcon } from "@/components/skills/SkillIcon";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { skillCategories, skillTooltip, skills, type SkillCategory } from "@/data/skills";
 
 export function Skills() {
-  const [category, setCategory] = useState<SkillCategory | "All">("All");
-  const visible = skills.filter((skill) => category === "All" || skill.category === category);
+  const [tab, setTab] = useState<SkillCategory>("Languages");
+  const visible = skills.filter((skill) => skill.category === tab);
 
   return (
-    <section id="skills" className="section circuit-bg">
-      <SectionHeading kicker="LOADOUT" title="Skills" />
-      <p className="mb-4 max-w-3xl text-muted">
-        Languages come from the resume and from GitHub language stats. Flutter engine files such as CMake, Swift, and
-        Objective-C are not counted. Proficiency bars are omitted because neither the resume nor GitHub reports a level.
-      </p>
-      <div className="mb-4 flex flex-wrap gap-2" role="tablist" aria-label="Skill categories">
-        <button type="button" className="lang-chip" aria-pressed={category === "All"} onClick={() => setCategory("All")}>
-          All
-        </button>
-        {skillCategories.map((item) => (
-          <button
-            key={item}
-            type="button"
-            className="lang-chip"
-            aria-pressed={category === item}
-            onClick={() => setCategory(item)}
-          >
-            {item}
+    <section id="level-03" className="level">
+      <p className="level-kicker">Level 03</p>
+      <h2>Inventory</h2>
+      <div className="pixel-tabs" aria-label="Skill groups">
+        {skillCategories.map((category) => (
+          <button key={category} type="button" aria-pressed={tab === category} onClick={() => setTab(category)}>
+            {category}
           </button>
         ))}
       </div>
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      <ul className="inventory">
         {visible.map((skill) => (
-          <li key={skill.name}>
-            <div className="skill-tile" tabIndex={0}>
-              <SkillIcon name={skill.name} />
-              <span className="font-display text-xl">{skill.name}</span>
-              <span className="tooltip" role="tooltip">
-                {skillTooltip(skill)}
-              </span>
-            </div>
-            <p className="sr-only">{skillTooltip(skill)}. Repo count {skillUsage(skill)}.</p>
+          <li key={skill.name} tabIndex={0} className="slot">
+            <span className="pixel-badge" aria-hidden="true">
+              {skill.name.slice(0, 2).toUpperCase()}
+            </span>
+            <span>{skill.name}</span>
+            <span className="tip" role="tooltip">
+              {skillTooltip(skill)}
+            </span>
           </li>
         ))}
       </ul>
-      <div className="mt-6">
-        <h3 className="mb-2 font-display text-2xl">Foundations from the resume</h3>
-        <ul className="flex flex-wrap gap-2">
-          {foundations.map((item) => (
-            <li key={item} className="chip">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <p className="fine">Power levels are omitted. Neither the resume nor GitHub reports a proficiency score.</p>
+      <div className="ground" aria-hidden="true" />
     </section>
   );
 }

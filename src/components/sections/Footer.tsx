@@ -1,17 +1,14 @@
-"use client";
-
-import { useHyper } from "@/components/effects/HyperContext";
-
 export function Footer() {
-  const { hyper } = useHyper();
   return (
-    <footer className="relative z-[3] flex flex-wrap items-center justify-between gap-3 border-t border-[#ff2e9a66] px-[4vw] py-6 text-sm text-muted">
-      <p>© {new Date().getFullYear()} Vanshika Nimwal. built with 💗 + caffeine</p>
-      <p>{hyper ? "HYPER NEON ✦" : "SYS.IDLE"}</p>
-      <a href="#home" className="neon-btn neon-btn-ghost">
-        Back to top
+    <footer className="game-over">
+      <p>THANKS FOR PLAYING ♥ INSERT COIN TO CONTINUE</p>
+      <a className="start-btn" href="#home">
+        Restart
       </a>
-      <p className="sr-only">Easter egg: the Konami code toggles hyper neon mode.</p>
+      <p>
+        <a href="/resume.pdf">Download resume</a>
+      </p>
+      <p className="fine">© {new Date().getFullYear()} Vanshika Nimwal · original pixel art · Player 02</p>
     </footer>
   );
 }

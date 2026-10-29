@@ -17,11 +17,9 @@ const config: Config = {
         muted: "var(--muted)",
       },
       fontFamily: {
-        display: ["var(--font-rajdhani)", "sans-serif"],
-        logo: ["var(--font-orbitron)", "sans-serif"],
-        mono: ["var(--font-share)", "ui-monospace", "monospace"],
+        display: ["var(--font-press)", "monospace"],
         pixel: ["var(--font-vt)", "monospace"],
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-body)", "sans-serif"],
       },
       boxShadow: {
         neon: "0 0 8px rgba(255,46,154,0.7), 0 0 24px rgba(139,44,255,0.45)",

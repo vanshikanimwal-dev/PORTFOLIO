@@ -15,13 +15,15 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "72px",
-          background: "#05010A",
+          background: "#070312",
           color: "#F5E9FF",
+          border: "16px solid #3CFF9E",
         }}
       >
-        <div style={{ color: "#FF6EC7", fontSize: 28, letterSpacing: 6 }}>VN// CYBERPUNK DEVELOPER</div>
-        <div style={{ fontSize: 84, marginTop: 16, color: "#FF2E9A" }}>Vanshika Nimwal</div>
-        <div style={{ fontSize: 32, marginTop: 12, color: "#CDB6E8" }}>Software Developer · Greater Noida</div>
+        <div style={{ color: "#FFE94D", fontSize: 28 }}>2026</div>
+        <div style={{ fontSize: 72, marginTop: 12, color: "#FF2E9A" }}>PORTFOLIO</div>
+        <div style={{ fontSize: 36, marginTop: 12 }}>Vanshika Nimwal</div>
+        <div style={{ fontSize: 28, marginTop: 8, color: "#3CFF9E" }}>Software Developer</div>
       </div>
     ),
     { ...size },

@@ -10,18 +10,16 @@ export default function Icon() {
         style={{
           width: "32px",
           height: "32px",
-          background: "#05010A",
+          background: "#070312",
           color: "#FF2E9A",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: 11,
-          fontWeight: 700,
-          letterSpacing: -0.5,
-          border: "2px solid #FF2E9A",
+          fontSize: 18,
+          border: "2px solid #3CFF9E",
         }}
       >
-        VN
+        ♥
       </div>
     ),
     { ...size },

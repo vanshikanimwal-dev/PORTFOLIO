@@ -3,7 +3,7 @@ import type { Experience, ResumeProject } from "./types";
 export const profile = {
   name: "Vanshika Nimwal",
   headline: "Software Developer",
-  themeTitle: "Cyberpunk Developer",
+  themeTitle: "Developer",
   summary:
     "Software Developer with hands-on experience building cross-platform mobile applications, secure backend systems, and immersive XR experiences using Flutter, Java 21, Spring Boot, and Unity. Strong foundation in data structures, object-oriented programming, and software architecture, with practical experience delivering production-ready applications, integrating REST APIs, and developing concurrency-safe, real-time systems, including a double-entry wallet ledger that stays balanced under 100 concurrent transfers, a blockchain-anchored credential verifier with 6 independent checks, and an algorithm visualizer covering 20 algorithms with a live web demo. Passionate about performance optimization, clean code practices, and creating scalable, user-centric digital experiences.",
   tagline:
@@ -140,13 +140,7 @@ export const profile = {
   ],
   achievements: [] as string[],
   hackathons: [] as string[],
-  typewriter: [
-    "Cyberpunk Developer",
-    "Software Developer",
-    "XR Developer",
-    "Backend Developer",
-    "Flutter Developer",
-  ],
+  typewriter: ["Developer", "Software Developer", "XR Developer", "Backend Developer", "Flutter Developer"],
 } as const;
 
 /** Gaps left blank on purpose. Do not invent values for these. */

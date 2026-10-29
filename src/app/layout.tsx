@@ -1,27 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Inter, Orbitron, Rajdhani, Share_Tech_Mono, VT323 } from "next/font/google";
+import { Pixelify_Sans, Press_Start_2P, VT323 } from "next/font/google";
 import { Chrome } from "@/components/Chrome";
 import { profile } from "@/data/profile";
 import { getSiteUrl } from "@/lib/utils";
 import "./globals.css";
 
-const rajdhani = Rajdhani({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-rajdhani",
-});
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["500", "700"],
-  variable: "--font-orbitron",
-});
-
-const share = Share_Tech_Mono({
+const press = Press_Start_2P({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-share",
+  variable: "--font-press",
 });
 
 const vt = VT323({
@@ -30,9 +18,10 @@ const vt = VT323({
   variable: "--font-vt",
 });
 
-const inter = Inter({
+const body = Pixelify_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
 });
 
 const siteUrl = getSiteUrl();
@@ -68,7 +57,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05010A",
+  themeColor: "#070312",
   width: "device-width",
   initialScale: 1,
 };
@@ -98,7 +87,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html
       lang="en"
-      className={`${rajdhani.variable} ${orbitron.variable} ${share.variable} ${vt.variable} ${inter.variable}`}
+      className={`${press.variable} ${vt.variable} ${body.variable}`}
     >
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
