@@ -31,9 +31,6 @@ export default async function BlogPostPage({ params }: Props) {
         {post.mood}] · {post.readingTime} min
       </p>
       <h1>{post.title}</h1>
-      {post.placeholder ? (
-        <p className="fine">PLACEHOLDER — edit content/blog/{post.slug}.mdx before treating this as a published post.</p>
-      ) : null}
       <div className="mt-6 grid gap-6 lg:grid-cols-[180px_1fr]">
         <aside>
           <p className="level-kicker">Index</p>

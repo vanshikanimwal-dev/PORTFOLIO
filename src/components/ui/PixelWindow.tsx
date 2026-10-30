@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef, useState, type PointerEvent, type ReactNode } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState, type PointerEvent, type ReactNode } from "react";
 
 type Props = {
   title: string;
@@ -9,15 +8,21 @@ type Props = {
   children: ReactNode;
   onClose?: () => void;
   className?: string;
+  pinned?: boolean;
 };
 
-export function PixelWindow({ title, label, children, onClose, className }: Props) {
-  const reduced = useReducedMotion();
+export function PixelWindow({ title, label, children, onClose, className, pinned = false }: Props) {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [entered, setEntered] = useState(false);
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null);
 
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setEntered(true);
+  }, []);
+
   function onPointerDown(event: PointerEvent<HTMLDivElement>) {
-    if (window.matchMedia("(max-width: 800px)").matches) return;
+    if (pinned || window.matchMedia("(max-width: 800px)").matches) return;
     drag.current = { x: event.clientX, y: event.clientY, left: offset.x, top: offset.y };
     event.currentTarget.setPointerCapture(event.pointerId);
   }
@@ -35,12 +40,9 @@ export function PixelWindow({ title, label, children, onClose, className }: Prop
   }
 
   return (
-    <motion.article
-      className={className ? `pixel-window ${className}` : "pixel-window"}
+    <article
+      className={`${className ? `pixel-window ${className}` : "pixel-window"}${entered ? " is-in" : ""}`}
       style={{ transform: `translate(${offset.x}px, ${offset.y}px)` }}
-      initial={reduced ? false : { scale: 0.96, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.2 }}
     >
       <div
         className="window-bar"
@@ -62,6 +64,6 @@ export function PixelWindow({ title, label, children, onClose, className }: Prop
       </div>
       {label ? <p className="window-label">{label}</p> : null}
       <div className="window-body">{children}</div>
-    </motion.article>
+    </article>
   );
 }

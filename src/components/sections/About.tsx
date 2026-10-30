@@ -1,89 +1,140 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
-import { skillTooltip, skills } from "@/data/skills";
+import { skillCategories, skillTooltip, skills, type Skill } from "@/data/skills";
+import { ConsolePhoto } from "@/components/pixel/ConsolePhoto";
 import { PixelConsole } from "@/components/pixel/PixelConsole";
 import { CoinButton, DoorLink } from "@/components/pixel/PixelActions";
-import { PixelBat, PixelFlag, PixelKey, PixelPlant, PixelStar } from "@/components/pixel/sprites";
+import { PixelFlag, PixelKey, PixelPlant } from "@/components/pixel/sprites";
+import { SkillMark } from "@/components/skills/SkillMark";
 import { PixelWindow } from "@/components/ui/PixelWindow";
+import { Section } from "@/components/ui/Section";
 
 const languages = new Set(projects.flatMap((project) => project.languages.map((language) => language.name)));
 const resumeSkills = skills.filter((skill) => skill.resume);
 
-export function About() {
+type Art = { console: string | null };
+
+function ChipGrid({ items, size }: { items: Skill[]; size: number }) {
+  const groups = skillCategories
+    .map((category) => ({ category, items: items.filter((skill) => skill.category === category) }))
+    .filter((group) => group.items.length > 0);
   return (
-    <section id="level-01" className="level">
-      <p className="level-kicker">Level 01</p>
-      <h2>Meet the player</h2>
-      <p className="mint-name">{profile.name}</p>
-      <div className="about-layout">
-        <PixelWindow title="PLAYER.CARD" label="Hello !!">
-          <p>Player: {profile.name}</p>
-          <p>Role: {profile.headline}</p>
-          <p>Mission: {profile.tagline}</p>
-          <p>Status: {profile.github.bio}</p>
-          <p>TODO: availability is not stated on the resume.</p>
-        </PixelWindow>
-        <div className="console-wrap">
-          <PixelConsole>
-            <Image
-              src={profile.github.avatar}
-              alt="GitHub profile photo of Vanshika Nimwal. The resume did not include a portrait."
-              width={128}
-              height={128}
-              className="pixel-photo"
-            />
-          </PixelConsole>
-        </div>
-        <PixelWindow title="WEAPONS" label="Weapons Mastery">
-          <ul className="weapon-list">
-            {resumeSkills.map((skill) => (
-              <li key={skill.name} tabIndex={0} className="weapon">
-                <span className="pixel-badge" aria-hidden="true">
-                  {skill.name.slice(0, 2).toUpperCase()}
-                </span>
-                {skill.name}
+    <div className="chip-groups">
+      {groups.map((group) => (
+        <div key={group.category}>
+          <p className="chip-label">{group.category}</p>
+          <ul className="icon-grid">
+            {group.items.map((skill) => (
+              <li key={skill.name} tabIndex={0}>
+                <SkillMark name={skill.name} size={size} />
+                <span>{skill.name}</span>
                 <span className="tip" role="tooltip">
                   {skillTooltip(skill)}
                 </span>
               </li>
             ))}
           </ul>
-        </PixelWindow>
-        <PixelWindow title="QUEST.LOG" label="Training Log">
-          {profile.education.map((item) => (
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function QuestLog() {
+  const [tab, setTab] = useState<"EXPERIENCE" | "EDUCATION" | "COURSES">("EXPERIENCE");
+  const [open, setOpen] = useState<string | null>(null);
+  return (
+    <PixelWindow title="QUEST.LOG" label="Quest Log" pinned>
+      <div className="pixel-tabs" aria-label="Quest log">
+        {(["EXPERIENCE", "EDUCATION", "COURSES"] as const).map((item) => (
+          <button key={item} type="button" aria-pressed={tab === item} onClick={() => setTab(item)}>
+            {item}
+          </button>
+        ))}
+      </div>
+      {tab === "EXPERIENCE"
+        ? profile.experience.map((item) => {
+            const id = `${item.role}-${item.org}`;
+            const extra = item.points.slice(3);
+            return (
+              <article key={id} className="quest-mini">
+                <h3>
+                  {item.role}, {item.org}
+                </h3>
+                {item.display.trim().toUpperCase().startsWith("TODO") ? null : <p>{item.display}</p>}
+                <ul>
+                  {item.points.slice(0, 3).map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+                {extra.length > 0 && open === id ? (
+                  <ul>
+                    {extra.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                {extra.length > 0 ? (
+                  <button type="button" onClick={() => setOpen(open === id ? null : id)}>
+                    {open === id ? "COLLAPSE" : "EXPAND"}
+                  </button>
+                ) : null}
+              </article>
+            );
+          })
+        : null}
+      {tab === "EDUCATION"
+        ? profile.education.map((item) => (
             <p key={item.school}>
               {item.credential}, {item.school}. {item.location}. {item.display}.
             </p>
+          ))
+        : null}
+      {tab === "COURSES" ? (
+        <ul className="chips">
+          {profile.certifications.map((item) => (
+            <li key={item}>{item}</li>
           ))}
-          <ul>
-            {profile.certifications.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          {profile.experience.map((item) => (
-            <article key={`${item.role}-${item.org}`}>
-              <h3>
-                {item.role}, {item.org}
-              </h3>
-              <p>
-                {item.kind} · {item.display}
-              </p>
-              <ul>
-                {item.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-          <p>TODO: no separate achievements or named hackathon are listed on the resume.</p>
+        </ul>
+      ) : null}
+    </PixelWindow>
+  );
+}
+
+export function About({ art }: { art: Art }) {
+  const [more, setMore] = useState(false);
+  return (
+    <Section id="level-01" level="LEVEL 01" title="Meet The Player" subtitle={profile.headline}>
+      <div className="about-col">
+        <PixelWindow title="PLAYER.CARD" label="Hello !!" pinned>
+          <p>Player: {profile.name}</p>
+          <p>Role: {profile.headline}</p>
+          <p className={more ? "" : "clamp-2"}>Mission: {more ? profile.summary : profile.tagline}</p>
+          <button type="button" onClick={() => setMore((value) => !value)}>
+            {more ? "SHOW LESS" : "READ MORE"}
+          </button>
         </PixelWindow>
-        <PixelWindow title="SKILLS" label="Skills Mastery">
-          <ul>
-            {skills.map((skill) => (
-              <li key={skill.name}>{skill.name}</li>
-            ))}
-          </ul>
+        <QuestLog />
+      </div>
+      <div className="console-wrap">
+        {art.console ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className="console-art" src={art.console} alt="Pixel console" />
+        ) : (
+          <PixelConsole>
+            <ConsolePhoto />
+          </PixelConsole>
+        )}
+      </div>
+      <div className="about-col mastery-col">
+        <PixelWindow title="WEAPONS" label="Weapons Mastery" pinned>
+          <ChipGrid items={resumeSkills} size={24} />
+        </PixelWindow>
+        <PixelWindow title="SKILLS" label="Skills Mastery" pinned>
+          <ChipGrid items={skills} size={24} />
         </PixelWindow>
       </div>
       <dl className="stat-row">
@@ -95,28 +146,14 @@ export function About() {
           <dt>LANGUAGES</dt>
           <dd>{languages.size}</dd>
         </div>
-        <div>
-          <dt>YEARS XP</dt>
-          <dd>TODO</dd>
-        </div>
-        <div>
-          <dt>PROJECTS SHIPPED</dt>
-          <dd>TODO</dd>
-        </div>
       </dl>
-      <p className="fine">
-        Years of experience and a shipped-project count are not on the resume. Dated internships run May 2025–Mar 2026.
-      </p>
       <div className="decor-strip">
         <CoinButton />
         <PixelKey className="decor" />
         <PixelPlant className="decor" />
-        <PixelBat className="decor flap" />
         <PixelFlag className="decor" />
-        <PixelStar className="decor twinkle" />
         <DoorLink href="#level-02" />
       </div>
-      <div className="ground" aria-hidden="true" />
-    </section>
+    </Section>
   );
 }

@@ -57,6 +57,7 @@ export function getAllPosts(): PostMeta[] {
         readingTime: readingTime(content),
       };
     })
+    .filter((post) => !post.placeholder)
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
@@ -66,6 +67,7 @@ export function getPost(slug: string): Post | null {
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   const frontmatter = data as PostFrontmatter;
+  if (frontmatter.placeholder) return null;
   return {
     ...frontmatter,
     slug,

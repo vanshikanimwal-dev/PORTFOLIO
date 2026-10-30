@@ -5,19 +5,20 @@ import { profile } from "@/data/profile";
 import { contactSchema } from "@/lib/contact";
 import { useGame } from "@/components/game/GameContext";
 import { PixelDoor, PixelFlag } from "@/components/pixel/sprites";
+import { Section } from "@/components/ui/Section";
 
 const EMPTY = { name: "", email: "", subject: "", message: "", company: "" };
 type Field = "name" | "email" | "subject" | "message";
 
 const LINKS = [
-  ["Email", profile.email],
-  ["GitHub", profile.links.github],
-  ["LinkedIn", profile.links.linkedin],
-  ["Location", profile.location],
-] as const;
+  { label: "Email", text: profile.email, href: `mailto:${profile.email}`, copy: profile.email },
+  { label: "GitHub", text: "github.com/vanshikanimwal-dev", href: profile.links.github, copy: profile.links.github },
+  { label: "LinkedIn", text: "linkedin.com/in/vanshika-nimwal", href: profile.links.linkedin, copy: profile.links.linkedin },
+  { label: "Location", text: "Greater Noida", href: "", copy: profile.location },
+];
 
 export function Contact() {
-  const { play } = useGame();
+  const { play, unlock } = useGame();
   const [values, setValues] = useState(EMPTY);
   const [errors, setErrors] = useState<Partial<Record<Field, string>>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -64,6 +65,7 @@ export function Contact() {
       setStatus("sent");
       setValues(EMPTY);
       play("level");
+      unlock("message", "Message sent");
     } catch {
       setStatus("error");
       setError("The message could not be sent.");
@@ -71,19 +73,24 @@ export function Contact() {
   }
 
   return (
-    <section id="level-05" className="level">
-      <p className="level-kicker">Level 05</p>
-      <h2>Final boss</h2>
-      <div className="boss-scene" aria-hidden="true">
-        <PixelFlag className="decor" />
-        <PixelDoor className="decor door-prop" />
-      </div>
+    <Section
+      id="level-05"
+      level="LEVEL 05"
+      title="Final Boss"
+      subtitle="Send a message"
+      extras={
+        <div className="heading-extras" aria-hidden="true">
+          <PixelFlag className="decor" />
+          <PixelDoor className="decor door-prop" />
+        </div>
+      }
+    >
       <div className="contact-layout">
         <form className="dialogue" onSubmit={onSubmit} noValidate>
           <p className="prompt">What message do you wish to send, traveler?</p>
           {(["name", "email", "subject", "message"] as const).map((field) => (
             <label key={field} className="pixel-field">
-              <span>{field}</span>
+              <span>{field[0].toUpperCase() + field.slice(1)}</span>
               {field === "message" ? (
                 <textarea
                   name={field}
@@ -119,37 +126,44 @@ export function Contact() {
             />
           </label>
           <button type="submit" className="start-btn" disabled={status === "sending"}>
-            {status === "sending" ? "SENDING..." : "SEND"}
+            {status === "sending" ? "SENDING..." : "SEND MESSAGE"}
           </button>
           {status === "sent" ? (
-            <p className="delivered" role="status">
+            <p className="dialogue-note" role="status">
               MESSAGE DELIVERED ★
             </p>
           ) : null}
           {status === "error" ? (
-            <p className="pixel-error" role="alert">
+            <p className="dialogue-note" role="alert">
               !! {error}
             </p>
           ) : null}
         </form>
-        <aside className="pixel-window">
+        <aside className="contact-panel pixel-window">
           <div className="window-bar">
             <span>DIRECT</span>
           </div>
           <ul className="window-body copy-list">
-            {LINKS.map(([label, value]) => (
-              <li key={label}>
-                <span>{label}</span>
-                <span>{value}</span>
-                <button type="button" onClick={() => copy(value, label)}>
-                  {copied === label ? "COPIED" : "COPY"}
+            {LINKS.map((item) => (
+              <li key={item.label}>
+                <span className="pixel-badge" aria-hidden="true">
+                  {item.label.slice(0, 1)}
+                </span>
+                {item.href ? (
+                  <a href={item.href} title={item.copy} aria-label={`${item.label}: ${item.text}`}>
+                    {item.text}
+                  </a>
+                ) : (
+                  <span title={item.copy}>{item.text}</span>
+                )}
+                <button type="button" aria-label={`Copy ${item.label}`} onClick={() => copy(item.copy, item.label)}>
+                  {copied === item.label ? "COPIED" : "COPY"}
                 </button>
               </li>
             ))}
           </ul>
         </aside>
       </div>
-      <div className="ground" aria-hidden="true" />
-    </section>
+    </Section>
   );
 }

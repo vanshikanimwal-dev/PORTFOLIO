@@ -5,6 +5,7 @@ import { PixelCursor } from "@/components/effects/PixelCursor";
 import { GameProvider } from "@/components/game/GameContext";
 import { Footer } from "@/components/sections/Footer";
 import { Hud } from "@/components/ui/Hud";
+import { LevelFlash } from "@/components/ui/LevelFlash";
 import { LoadingScreen } from "@/components/ui/LoadingScreen";
 
 export function Chrome({ children }: { children: ReactNode }) {
@@ -16,6 +17,7 @@ export function Chrome({ children }: { children: ReactNode }) {
       <LoadingScreen />
       <PixelCursor />
       <Hud />
+      <LevelFlash />
       <main id="content">{children}</main>
       <Footer />
     </GameProvider>

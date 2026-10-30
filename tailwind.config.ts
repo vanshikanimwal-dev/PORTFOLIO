@@ -17,9 +17,10 @@ const config: Config = {
         muted: "var(--muted)",
       },
       fontFamily: {
-        display: ["var(--font-press)", "monospace"],
-        pixel: ["var(--font-vt)", "monospace"],
-        sans: ["var(--font-body)", "sans-serif"],
+        display: ["var(--font-pixel)", "monospace"],
+        pixel: ["var(--font-pixel)", "monospace"],
+        sans: ["var(--font-sans)", "sans-serif"],
+        hand: ["var(--font-hand)", "cursive"],
       },
       boxShadow: {
         neon: "0 0 8px rgba(255,46,154,0.7), 0 0 24px rgba(139,44,255,0.45)",

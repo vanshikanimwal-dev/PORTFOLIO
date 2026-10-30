@@ -1,0 +1,153 @@
+import { profile } from "./profile";
+
+/** Visible copy follows the design mockup. Resume conflicts are listed in TODO.md. */
+export const site = {
+  name: "Vanshika Nimwal",
+  eyebrow: "STARTING MY NEXT LEVEL...",
+  roles: [
+    "CSE Student | Aspiring Software Engineer",
+    "AR/VR Enthusiast | UI/UX Designer | Flutter & Unity Developer",
+    "Java Developer | Building the future, one line at a time.",
+  ],
+  about:
+    "I am a final year B.Tech CSE student at Sharda University, Greater Noida, passionate about building meaningful applications and immersive experiences. I love working with Flutter, Java, and Unity, and I'm exploring AR/VR, UI/UX and backend development to create user-centric solutions. I am actively looking for internship and job opportunities to kickstart my career as a Software Developer.",
+  currently: "Currently: Final Year • Sharda University",
+  levelUp: {
+    location: "Greater Noida, India",
+    education: ["B.Tech CSE (Final Year)", "Sharda University"],
+    goal: ["Software Developer / Engineer", "(Internship/Full-time)"],
+  },
+  dream: "DREAM CODE BUILD",
+  bubble: ["Small steps", "Big dreams ✦"],
+  skills: {
+    Languages: ["Java", "Python", "C#", "Dart", "JavaScript"],
+    "Frameworks & Tools": [
+      "Flutter",
+      "Firebase",
+      "Riverpod / BLoC",
+      "MVVM",
+      "REST APIs",
+      "MySQL",
+      "Unity",
+      "Vuforia",
+      "ARCore",
+      "XR Toolkit",
+    ],
+    Design: ["Figma", "UI/UX"],
+    Other: ["Git", "Docker", "VS Code"],
+  },
+  experience: [
+    {
+      company: "Alphaid Healthcare",
+      role: "Software Developer Intern",
+      dates: "May 2025 - Present",
+      note: "",
+      accent: "mint",
+      points: [
+        "Developed Flutter UI and backend logic for a women healthcare app.",
+        "Integrated cross-platform features and improved load time by 25%.",
+        "Used by 100+ patients.",
+      ],
+    },
+    {
+      company: "RiyalVerse Technology Pvt Ltd",
+      role: "XR Developer Intern",
+      dates: "Oct 2025 - Present",
+      note: "(6 months • Hybrid)",
+      accent: "purple",
+      points: ["Working in Development dept.", "Building XR experiences using Unity and related tools."],
+    },
+    {
+      company: "Academic Project",
+      role: "AR/VR Developer",
+      dates: "2024 - Present",
+      note: "",
+      accent: "blue",
+      points: ["Explored AR/VR technologies", "and built interactive experiences using Unity, Vuforia and ARCore."],
+    },
+    {
+      company: "Freelance / Client Project",
+      role: "Flutter Asset Management App",
+      dates: "10 weeks",
+      note: "",
+      accent: "gold",
+      points: ["Built a cross-platform asset management app for Ferrero Rocher client.", "Used MySQL + Firebase."],
+    },
+    {
+      company: "Capital Bull Wave",
+      role: "Backend Developer",
+      dates: "",
+      note: "",
+      accent: "cyan",
+      points: profile.experience.find((item) => item.org === "Capital Bull Wave")?.points ?? [],
+    },
+  ],
+  certifications: [
+    { name: "Oracle Java Foundations & Advanced", accent: "pink" },
+    { name: "Udemy Android Studio Complete Guide", accent: "purple" },
+    { name: "Google Cloud GenAI Leader", accent: "blue" },
+    { name: "Flutter & Firebase Chat App", accent: "gold" },
+  ],
+  dsa: "200+ DSA problems solved in Java",
+  dsaHref: "https://github.com/vanshikanimwal-dev/leetcode-daily",
+  showcase: [
+    {
+      title: "Smart Expense Tracker",
+      chips: ["Flutter", "Riverpod", "Firebase"],
+      description: "Personal finance app with auth, transactions, charts and theme support.",
+      repo: "Expense-tracker",
+      planned: false,
+    },
+    {
+      title: "Realty Review (Web + Mobile)",
+      chips: ["Flutter", "go_router", "Maps", "fl_chart"],
+      description: "Property reviews, blogs, and real estate exploration platform.",
+      repo: "review-property-app",
+      planned: false,
+    },
+    {
+      title: "Morphix (Planned)",
+      chips: ["Flutter", "Python", "Image Editing"],
+      description: "An iLoveIMG-like image editor with modern UI and tools.",
+      repo: null,
+      planned: true,
+    },
+  ],
+  education: {
+    school: "Sharda University",
+    degree: "B.Tech - Computer Science Engineering",
+    detail: "(AR/VR Specialization) Final Year",
+    place: "Greater Noida, India",
+    years: "2023 - 2027",
+  },
+  missions: [
+    "Build impactful software",
+    "Explore AR/VR and next-gen technologies",
+    "Solve real-world problems",
+    "Grow as a developer and create opportunities",
+  ],
+  interests: ["Gaming", "Travel", "Music", "Photography", "Reading", "Design"],
+  research: [
+    {
+      kind: "Paper",
+      title: "AR Crime Reconstruction Using Spatial Data Analysis: A Systematic Review",
+      detail: "ICIMMI 2025 proceedings, ACM Digital Library. Co-authors: Ketan Anand, Avinash Kumar, Avantika Sharma, and Nikhil Ranjan.",
+      href: "https://doi.org/10.1145/3793449.3793484",
+      label: "Read paper",
+    },
+    {
+      kind: "Patent application",
+      title: "Automated Waste Segregation and Composting System",
+      detail:
+        "Published application IN202611078268 A1. Filed 25 June 2026, published 7 August 2026. Applicant: Sharda University. Co-inventors: Ritesh Rana, Arnav Mishra, Rachna, and Dr. Laxmi Kant Sagar.",
+      href: "https://www.linkedin.com/posts/vanshika-nimwal-90ab24314_patent-innovation-sustainability-activity-7492517416003072000-uPTZ",
+      label: "View publication note",
+    },
+  ],
+  connect:
+    "Have a project, opportunity or just want to say hi? I'd love to hear from you!",
+  footer: "Thanks for visiting! ✦ Keep coding, keep growing. ♥",
+  email: profile.email,
+  github: profile.links.github,
+  linkedin: profile.links.linkedin,
+} as const;

@@ -1,27 +1,30 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Pixelify_Sans, Press_Start_2P, VT323 } from "next/font/google";
-import { Chrome } from "@/components/Chrome";
+import { Caveat, Pixelify_Sans, Poppins } from "next/font/google";
+import { SiteShell } from "@/components/layout/SiteShell";
 import { profile } from "@/data/profile";
 import { getSiteUrl } from "@/lib/utils";
 import "./globals.css";
 
-const press = Press_Start_2P({
+const sans = Poppins({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-press",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-sans",
 });
 
-const vt = VT323({
+const pixel = Pixelify_Sans({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-vt",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-pixel",
 });
 
-const body = Pixelify_Sans({
+const hand = Caveat({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
+  weight: ["600", "700"],
+  display: "swap",
+  variable: "--font-hand",
 });
 
 const siteUrl = getSiteUrl();
@@ -29,13 +32,14 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Vanshika Nimwal — Software Developer",
+    default: "Vanshika Nimwal — CSE Student",
     template: "%s — Vanshika Nimwal",
   },
-  description: profile.tagline,
+  description:
+    "Final year B.Tech CSE student at Sharda University. Flutter, Java, Unity, and AR/VR. Building the future, one line at a time.",
   applicationName: "Vanshika Nimwal",
   authors: [{ name: profile.name, url: profile.links.github }],
-  keywords: ["Vanshika Nimwal", "Software Developer", "Flutter", "Java", "Spring Boot", "Unity"],
+  keywords: ["Vanshika Nimwal", "CSE Student", "Flutter", "Java", "Unity", "AR/VR"],
   alternates: {
     canonical: siteUrl,
     types: { "application/rss+xml": "/rss.xml" },
@@ -43,21 +47,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Vanshika Nimwal — Software Developer",
-    description: profile.tagline,
+    title: "Vanshika Nimwal — CSE Student",
+    description:
+      "Final year B.Tech CSE student at Sharda University. Flutter, Java, Unity, and AR/VR.",
     locale: "en_IN",
     siteName: "Vanshika Nimwal",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vanshika Nimwal — Software Developer",
-    description: profile.tagline,
+    title: "Vanshika Nimwal — CSE Student",
+    description:
+      "Final year B.Tech CSE student at Sharda University. Flutter, Java, Unity, and AR/VR.",
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#070312",
+  themeColor: "#060A1C",
   width: "device-width",
   initialScale: 1,
 };
@@ -66,7 +72,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  jobTitle: profile.headline,
+  jobTitle: "CSE Student",
   email: profile.email,
   telephone: profile.phone,
   url: siteUrl,
@@ -85,13 +91,10 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${press.variable} ${vt.variable} ${body.variable}`}
-    >
+    <html lang="en" className={`${sans.variable} ${pixel.variable} ${hand.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Chrome>{children}</Chrome>
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

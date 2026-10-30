@@ -2,12 +2,11 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="level">
-      <p className="level-kicker">404</p>
-      <h1>Save not found</h1>
-      <p className="fine">That page is not in this game.</p>
+    <section className="wrap" style={{ padding: "48px 0" }}>
+      <h1>Page not found</h1>
+      <p>That page is not on this site.</p>
       <p>
-        <Link className="start-btn" href="/">
+        <Link className="btn primary" href="/">
           Return home
         </Link>
       </p>

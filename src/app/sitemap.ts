@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   return [
     { url: site, lastModified: new Date() },
+    { url: `${site}/projects`, lastModified: new Date() },
     { url: `${site}/blog`, lastModified: posts[0]?.lastModified ?? new Date() },
     ...posts,
   ];

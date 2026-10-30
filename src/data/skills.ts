@@ -118,14 +118,10 @@ export function skillUsage(skill: Skill) {
 
 export function skillTooltip(skill: Skill) {
   const count = skillUsage(skill);
-  if (skill.fixedNote) return `${skill.name} — ${skill.fixedNote}`;
-  if (count === 0 && skill.resume) {
-    return `${skill.name} — listed on the resume. No synced repo was tagged with it.`;
-  }
-  if (count === 0) return `${skill.name} — no synced repo was tagged with it.`;
-  const where = skill.resume ? "listed on the resume and used in" : "used in";
   const noun = count === 1 ? "repo" : "repos";
-  return `${skill.name} — ${where} ${count} ${noun}`;
+  if (count > 0) return `${skill.name}: used in ${count} ${noun}`;
+  if (skill.resume) return `${skill.name}: listed on the resume`;
+  return `${skill.name}: no synced repo was tagged with it`;
 }
 
 export const foundations = [

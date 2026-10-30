@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
 type SoundName = "coin" | "click" | "level" | "meow";
 
@@ -8,9 +8,14 @@ type GameValue = {
   sound: boolean;
   toggleSound: () => void;
   coins: number;
+  popping: boolean;
   addCoin: () => void;
   play: (name: SoundName) => void;
   levelUp: boolean;
+  recruiter: boolean;
+  toggleRecruiter: () => void;
+  toast: string | null;
+  unlock: (id: string, message: string) => void;
 };
 
 const GameContext = createContext<GameValue | null>(null);
@@ -57,12 +62,28 @@ function playNow(name: SoundName) {
 export function GameProvider({ children }: { children: ReactNode }) {
   const [sound, setSound] = useState(false);
   const [coins, setCoins] = useState(0);
+  const [popping, setPopping] = useState(false);
   const [levelUp, setLevelUp] = useState(false);
+  const [recruiter, setRecruiter] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
   const soundRef = useRef(false);
+  const coinsRef = useRef(0);
 
   useEffect(() => {
     soundRef.current = sound;
   }, [sound]);
+
+  useEffect(() => {
+    try {
+      setRecruiter(window.localStorage.getItem("recruiter-mode") === "on");
+    } catch {
+      setRecruiter(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("recruiter-on", recruiter);
+  }, [recruiter]);
 
   useEffect(() => {
     const onHide = () => document.documentElement.classList.toggle("tab-hidden", document.hidden);
@@ -88,21 +109,58 @@ export function GameProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  const unlock = useCallback((id: string, message: string) => {
+    try {
+      const raw = window.sessionStorage.getItem("achievements");
+      const seen = raw ? (JSON.parse(raw) as string[]) : [];
+      if (seen.includes(id)) return;
+      seen.push(id);
+      window.sessionStorage.setItem("achievements", JSON.stringify(seen));
+    } catch {
+      return;
+    }
+    setToast(`ACHIEVEMENT UNLOCKED: ${message}`);
+    window.setTimeout(() => setToast(null), 2200);
+  }, []);
+
+  const addCoin = useCallback(() => {
+    setCoins((current) => current + 1);
+    if (coinsRef.current === 0) unlock("first-coin", "First coin");
+    coinsRef.current += 1;
+    setPopping(true);
+    window.setTimeout(() => setPopping(false), 280);
+    if (soundRef.current) playNow("coin");
+  }, [unlock]);
+
+  const toggleRecruiter = useCallback(() => {
+    setRecruiter((current) => {
+      const next = !current;
+      try {
+        window.localStorage.setItem("recruiter-mode", next ? "on" : "off");
+      } catch {
+        /* storage unavailable */
+      }
+      return next;
+    });
+  }, []);
+
   const value = useMemo<GameValue>(
     () => ({
       sound,
       toggleSound: () => setSound((current) => !current),
       coins,
-      addCoin: () => {
-        setCoins((current) => current + 1);
-        if (soundRef.current) playNow("coin");
-      },
+      popping,
+      addCoin,
       play: (name) => {
         if (soundRef.current) playNow(name);
       },
       levelUp,
+      recruiter,
+      toggleRecruiter,
+      toast,
+      unlock,
     }),
-    [sound, coins, levelUp],
+    [sound, coins, popping, addCoin, levelUp, recruiter, toggleRecruiter, toast, unlock],
   );
 
   return (
@@ -111,6 +169,11 @@ export function GameProvider({ children }: { children: ReactNode }) {
       {levelUp ? (
         <p className="level-up" role="status">
           Level Up!
+        </p>
+      ) : null}
+      {toast ? (
+        <p className="achievement" role="status">
+          {toast}
         </p>
       ) : null}
     </GameContext.Provider>

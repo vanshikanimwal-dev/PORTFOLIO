@@ -1,14 +1,15 @@
 export function Footer() {
   return (
-    <footer className="game-over">
-      <p>THANKS FOR PLAYING ♥ INSERT COIN TO CONTINUE</p>
-      <a className="start-btn" href="#home">
-        Restart
-      </a>
-      <p>
-        <a href="/resume.pdf">Download resume</a>
-      </p>
-      <p className="fine">© {new Date().getFullYear()} Vanshika Nimwal · original pixel art · Player 02</p>
+    <footer className="game-over container">
+      <div className="footer-row">
+        <p>THANKS FOR PLAYING ♥</p>
+        <a className="start-btn" href="#home">
+          RESTART
+        </a>
+        <a className="start-btn resume-btn" href="/resume.pdf">
+          DOWNLOAD RESUME
+        </a>
+      </div>
     </footer>
   );
 }
