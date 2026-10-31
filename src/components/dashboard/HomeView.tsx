@@ -26,6 +26,7 @@ import {
 import { site } from "@/data/site";
 import { projects } from "@/data/projects";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ProjectCover } from "@/components/dashboard/ProjectCover";
 import { SkillMark } from "@/components/skills/SkillMark";
 import { Astronaut, GradCap, NextSign, PixelCat, Spark } from "@/components/pixel/Art";
 
@@ -235,11 +236,7 @@ export function HomeView({ showHeroPhoto }: { showHeroPhoto: boolean }) {
                     <Ticks />
                     <div className="thumb">
                       {item.planned ? <span className="planned">PLANNED</span> : null}
-                      <div className="banner" aria-hidden="true">
-                        <span style={{ background: "#FF4FA3" }} />
-                        <span style={{ background: "#8B5CF6" }} />
-                        <span style={{ background: "#22D3EE" }} />
-                      </div>
+                      <ProjectCover name={item.title} category="Mobile" />
                     </div>
                     <h3>{item.title}</h3>
                     <ul className="chips">
@@ -265,7 +262,7 @@ export function HomeView({ showHeroPhoto }: { showHeroPhoto: boolean }) {
             <Ticks />
             <div className="edu">
             <div className="logo-frame">
-              <Image className="sharda" src="/images/sharda.png" alt="Sharda University logo" width={280} height={160} />
+              <Image className="sharda" src="/images/sharda.png" alt="Sharda University logo" width={217} height={273} />
             </div>
             <div>
               <h2><GraduationCap aria-hidden="true" /> EDUCATION</h2>

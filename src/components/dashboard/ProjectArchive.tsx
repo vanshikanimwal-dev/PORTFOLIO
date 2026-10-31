@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { ArrowRight, Folder, GitFork, Star } from "lucide-react";
 import { projectCategories, projects } from "@/data/projects";
+import { ProjectCover } from "@/components/dashboard/ProjectCover";
 
 const PAGE = 9;
 
@@ -14,7 +15,7 @@ function textOf(project: (typeof projects)[number]) {
   return project.description || project.readmeSummary || "";
 }
 
-export function ProjectArchive() {
+export function ProjectArchive({ images = {} }: { images?: Record<string, string> }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [language, setLanguage] = useState("All");
@@ -96,11 +97,7 @@ export function ProjectArchive() {
           {visible.map((project) => (
             <article key={project.name} className="panel subcard edge-purple">
               <div className="thumb">
-                <div className="banner" aria-hidden="true">
-                  <span style={{ background: "#FF4FA3" }} />
-                  <span style={{ background: "#8B5CF6" }} />
-                  <span style={{ background: "#22D3EE" }} />
-                </div>
+                <ProjectCover name={project.name} category={project.category} src={project.image || images[project.name]} />
               </div>
               <h2 style={{ color: "white", fontSize: 18 }}>{project.name}</h2>
               <p className="chip">{project.category}</p>
