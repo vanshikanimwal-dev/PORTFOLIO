@@ -179,7 +179,7 @@ export function HomeView({ showHeroPhoto }: { showHeroPhoto: boolean }) {
               {site.experience.map((job, index) => {
                 const JobIcon = JOB_ICONS[index] ?? Briefcase;
                 return (
-                <article key={job.company} className={`panel subcard edge-${job.accent}`}>
+                <article key={job.company} className={`panel subcard edge-${job.accent}${job.company === "Capital Bull Wave" ? " landscape" : ""}`}>
                   <Ticks />
                   <h3><JobIcon size={18} aria-hidden="true" /> {job.company}</h3>
                   <p>{job.role}</p>

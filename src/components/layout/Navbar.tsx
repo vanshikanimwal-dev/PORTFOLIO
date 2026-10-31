@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import { Menu, Sun, X } from "lucide-react";
+import { Alien } from "@/components/pixel/Art";
 
 const LINKS = [
   { id: "home", label: "Home" },
@@ -46,7 +46,7 @@ export function Navbar() {
   return (
     <header className="nav">
       <Link className="brand" href="/#home">
-        <Image src="/images/alien.png" alt="" width={40} height={36} className="brand-alien" />
+        <Alien />
         <span>VANSHIKA NIMWAL</span>
       </Link>
       <div className="nav-end">

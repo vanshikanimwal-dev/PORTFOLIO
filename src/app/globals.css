@@ -80,7 +80,7 @@ a { color: inherit; }
   border-bottom: 1px solid rgba(168, 85, 247, 0.35);
 }
 .brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; letter-spacing: 0.04em; font-weight: 700; font-size: 15px; white-space: nowrap; }
-.brand-alien { width: 36px; height: 32px; image-rendering: pixelated; }
+.brand > svg { width: 36px; height: 32px; flex: none; }
 .nav-links { display: flex; gap: 8px; align-items: center; }
 .nav-links a {
   display: inline-flex;
@@ -244,6 +244,9 @@ a { color: inherit; }
 .chips li:hover { transform: translateY(-2px); box-shadow: 0 0 12px rgba(52, 245, 165, 0.25); }
 .skill-grid, .exp-grid, .cert-grid, .project-grid { display: grid; gap: 16px; }
 .skill-grid, .exp-grid, .cert-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.exp-grid .landscape { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(180px, 240px) 1fr; column-gap: 28px; align-items: start; }
+.exp-grid .landscape h3, .exp-grid .landscape > p { grid-column: 1; margin: 0 0 6px; }
+.exp-grid .landscape ul { grid-column: 2; grid-row: 1 / span 4; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 20px; margin: 0; }
 .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .subcard h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: white; font-size: 16px; }
@@ -334,6 +337,8 @@ a { color: inherit; }
   }
   .nav { position: sticky; }
   .skill-grid, .exp-grid, .cert-grid, .project-grid, .archive, .interests { grid-template-columns: 1fr 1fr; }
+  .exp-grid .landscape { grid-template-columns: 1fr; }
+  .exp-grid .landscape ul { grid-template-columns: 1fr; grid-column: 1; grid-row: auto; }
   .research-grid { grid-template-columns: 1fr; }
   .name { white-space: normal; }
   .skyline { width: 70vw; opacity: 0.55; }

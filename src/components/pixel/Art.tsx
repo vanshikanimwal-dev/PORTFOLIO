@@ -1,5 +1,35 @@
 type Props = { className?: string };
 
+export function Alien({ className }: Props) {
+  const rows = [
+    ".KKK........KKK.",
+    ".KPKKKK..KKKKPK.",
+    "KKKKKPK..KPKKKKK",
+    "KPPKKPKKKKPKKPPK",
+    "KPKKPPPPPPPPKKPK",
+    "KKKPPPPPPPPPPKKK",
+    "KKPPPPPPPPPPPPKK",
+    "KKPPKKPPPPKKPPKK",
+    "PPPPKKPPPPKKPPPP",
+    "KKPPPPPPPPPPPPKK",
+    ".KPPPPPPPPPPPPK.",
+    ".KKKPPKKKKPPKKK.",
+    "...KPPK..KPPK...",
+    ".KKKKKK..KKKKKK.",
+    ".KPK........KPK.",
+  ];
+  const rects = rows.flatMap((row, y) =>
+    [...row].flatMap((cell, x) => (cell === "." ? [] : [{ x, y, fill: cell === "K" ? "#111111" : "#C9A0F8" }])),
+  );
+  return (
+    <svg className={className} viewBox="0 0 16 15" shapeRendering="crispEdges" aria-hidden="true">
+      {rects.map((rect) => (
+        <rect key={`${rect.x}-${rect.y}`} x={rect.x} y={rect.y} width="1" height="1" fill={rect.fill} />
+      ))}
+    </svg>
+  );
+}
+
 export function Invader({ className }: Props) {
   return (
     <svg className={className} viewBox="0 0 12 8" shapeRendering="crispEdges" aria-hidden="true">
